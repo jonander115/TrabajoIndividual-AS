@@ -1,12 +1,12 @@
 services:
   servidor-lightstreamer:
-    build: ./servidor-lightstreamer/
+    image: jonanderlda/servidor-entrega-individual-as
     ports:
       - 8080:8080
     volumes:
       - volLogs:/lightstreamer/logs/
   apache-web:
-    build: ./apache-web/
+    image: jonanderlda/cliente-entrega-individual-as
     ports:
       - 80:80
 volumes:
