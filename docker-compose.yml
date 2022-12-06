@@ -1,0 +1,13 @@
+services:
+  servidor-lightstreamer:
+    build: ./servidor-lightstreamer/
+    ports:
+      - 8080:8080
+    volumes:
+      - volLogs:/lightstreamer/logs/
+  apache-web:
+    build: ./apache-web/
+    ports:
+      - 80:80
+volumes:
+  volLogs:
